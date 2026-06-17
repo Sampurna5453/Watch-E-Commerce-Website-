@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About Us</title>
+  <meta name="description" content="HTML and CSS">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="SWATCH watch company">
+  <link rel="stylesheet" href="../css/cblack.css">
+  <style>
+    footer {
+        background-color: black; /* Entire footer background is black */
+        color: white; /*text in the footer becomes white */
+        padding: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',sans-serif;
+      }
+      
+      /* Footer Sections: About, Contact, Policies */
+      .footer-sections {
+        display: flex;
+        justify-content: space-between; /* Align sections across the width */
+        text-align: left;
+        margin-bottom: 20px; /* Space between sections and the Swiss Made part */
+      }
+      
+      .footer-column {
+        flex: 1; /* Each section takes equal width */
+        padding: 0 10px; /* Add some horizontal padding */
+      }
+      
+      .footer-column p {
+        margin: 5px 0;
+      }
+      
+      .footer-column a {
+        color: white;
+        text-decoration: none;
+      }
+      
+      .footer-column a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Swiss Made Section */
+      .swiss-made-section {
+        text-align: center;
+        margin-top: 40px; /* Space above the Swiss Made section */
+      }
+      
+      .swiss-made {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px; /* Space between logo and HR */
+      }
+      
+      .swiss-flag {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+      
+      .hr {
+        border: 1px solid white; /* White line for contrast */
+        margin: 20px auto; /* Add space above and below HR */
+        width: 90%; /* Center the HR and limit its width */
+        margin-bottom: 20px;
+      }
+      
+      .copyright {
+        font-size: 14px;
+        margin-top: 10px;
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="../images/swatch-logo.webp" alt="Swatch Logo">
+    </div>
+    <div class="menu">
+      <nav><a href="website1.html">Home</a></nav>
+      <nav><a href="aboutus.html">About</a></nav>
+      <nav><a href="blog.html">Blog</a></nav>
+      <nav> <a href="products.html">Products</a></nav>
+      <nav><a href="research.html">Research</a></nav>
+      <nav><a href="contactus.html">Contact Us</a></nav>
+    </div>
+    <div class="head">
+    </div>
+  </header>
+
+  <section class="product-detail">
+    <!-- Watch Name -->
+    <h1>C-Black </h1>
+
+    <!-- Watch Images and Description -->
+    <div class="product-container">
+      <!-- Left: Image Boxes -->
+      <div class="image-gallery">
+        <div class="image-box"><img src="../images/cblack1.jpg" alt="Mono Black Front"></div>
+        <div class="image-box"><img src="../images/cblack2.png" alt="Mono Black Side"></div>
+        <div class="image-box"><img src="../images/cblack3.jpg" alt="Mono Black Back"></div>
+      </div>
+
+      <!-- Right: Description Box -->
+      <div class="description-box">
+        <h2>Details (SB03B100)</h2>
+        <p><strong>Price:</strong> <del>$150.00</del> $140.00</p>
+        <p><strong>Description:</strong> With bio-ceramic for a silky touch, this fully bio-sourced beauty reveals a visible movement. It's a bold black choice that's innovation at its best.</p>
+        
+        <h2>Features</h2>
+        <p><strong>Movement:</strong>Quartz</p>
+        <p><strong>Water Resistant:</strong>3 Bar</p>
+        <p><strong>Collection:</strong>Bio Ceramic</p>
+        <p><strong>Packaging:</strong>Standard</p>
+
+        <h2>Specifications</h2>
+        <p><strong>Diameter:</strong> 47.00 mm</p>
+        <p><strong>Thickness:</strong>11.85 mm</p>
+        <p><strong>Warranty:</strong> 2 years</p>
+        <p><strong>Color:</strong>Black</p>
+        <p><strong>Strap Color:</strong>Quartz</p>
+        <p><strong>Strap Material:</strong>ORGINALS</p>
+
+        <p><strong>Case Material:</strong>Bioceramic</p>
+        <p><strong>Product Family:</strong>ORGINALS</p>
+        <!-- Buttons -->
+        <div class="action-buttons">
+          <a href="products.html" class="back-button">Back to Products</a>
+          <button onclick="buyNow()">Buy Now</button>
+          <button onclick="cartbutton()">Add to Cart</button>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <Script>
+    function buyNow() {
+      alert("Your purchase was successful! Thank you for supporting Swatch.");
+    }
+    function cartbutton(){
+      alert("The item was succesfully added to the cart!")
+    }
+  </Script>
+    <section id="product-section">
+  
+      <!-- Add Review and Comment Form -->
+      <div class="review-form">
+        <h3>Leave a Review</h3>
+        <div class="stars" id="star-rating">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <textarea id="comment" placeholder="Write your comment here..." rows="4" style="width: 100%;"></textarea>
+        <button id="submit-review">Submit Review</button>
+      </div>
+    
+      <!-- Add Comments Section -->
+      <div class="comments-section" id="comments-section">
+        <h3>Customer Reviews</h3>
+        <!-- Dynamically added reviews will appear here -->
+      </div>
+    </section>
+    
+    <!-- Link to  external CSS -->
+    <script src="../javascript/review.js" defer></script>
+    <!-- Footer -->
+  <footer>
+    <!-- Footer Content: About Us, Contact Us, Policies -->
+    <div class="footer-sections">
+      <!-- About Us -->
+      <div class="footer-column">
+        <a href="aboutus.html">
+        <h1 style="font-size: 18px; margin-bottom: 10px;">About Us</h1>
+      </a>
+        <p>You are accessing the Swatch brand website.</p>
+        <p>Store Locator</p>
+      </div>
+  
+      <!-- Contact Us -->
+      <div class="footer-column">
+        <a href="contactus.html">
+        <h1 style="font-size: 18px; margin-bottom: 10px;">Contact Us</h1>
+      </a>
+        <p>Unit name: Trade Network Pvt Ltd.</p>
+        <p>Address: Kamaladi Kathmandu, Bagamati, Nepal, 44600</p>
+        <p>Email: <a href="mailto:swatchinfo@ntn.com.np">swatchinfo@ntn.com.np</a></p>
+        <p>Ph no: 01-000444</p>
+      </div>
+  
+      <!-- Policies -->
+      <div class="footer-column">
+        <h1 style="font-size: 18px; margin-bottom: 10px;">Policies</h1>
+        <p>Shipping & Order Policy</p>
+        <p>Warranty Policy</p>
+        <p>Privacy Policy</p>
+        <nav>
+          <a href="../html/contactus.html">Need help</a>
+      </nav>
+      
+      </div>
+    </div>
+  
+    <!-- Swiss Made Section -->
+    <div class="swiss-made-section">
+      <div class="swiss-made">
+        <img src="../images/swislogo.webp" alt="Swiss Flag" class="swiss-flag">
+        <h2 style="font-size: 15px;">SWISS MADE</h2>
+      </div>
+      <hr>
+      <p class="copyright">© SWATCH AG 2025. ALL RIGHTS RESERVED: SWISS WATCHES</p>
+    </div>
+  </footer>
+</body>
+</html>
